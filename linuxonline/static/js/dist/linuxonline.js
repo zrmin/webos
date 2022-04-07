@@ -1,0 +1,4 @@
+class Alinuxonline{
+    constructor(id){
+    }
+}
