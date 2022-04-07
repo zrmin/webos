@@ -1,0 +1,92 @@
+/*
+Optional: "VT323" font face from Google web fonts.
+The following import is a very retro terminal font, if you want to use it. If you
+do, remove this comment and un-comment this section and add 'VT323' to the
+beginning of the font-family list for #terminal{} below. You may need to increase
+the font size as it's quite small.
+@import url('https://fonts.googleapis.com/css?family=VT323');
+*/
+
+/**
+* Terminal container.
+*/
+
+body {
+  color: #ededed;
+  font-size: 1.125rem /* 18/16 */;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  padding: 0;
+  margin: 10;
+
+  box-sizing: border-box;
+  /* background: rgba(0, 0, 0, 0.7); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 0;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  /* 兼容Webkit内核浏览器如Chrome和Safari */
+  -o-background-size: cover;
+  /* 兼容Opera */
+
+}
+
+.alinuxonline_linux_field {
+    background-image: url("/static/image/linux/background.png");
+    background-size: 100%, 100%;
+}
+
+span {
+  font-style: italic;
+}
+
+span.title {
+  font-size: 3.125rem /* 50/16 */;
+  font-weight: 400;
+  color: #dcdcdc;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#terminal {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+/**
+* The input span where the input happens.
+* Also applied to the previous inputs made in the current session.
+*/
+#terminal .input {
+  height: 1em;
+  min-width: 3em;
+  outline: none;
+  border: none;
+  display: inline-block;
+}
+
+#terminal .prompt {
+  color: #6fb5ee;
+}
+
+#terminal p {
+  margin: 0;
+  padding: 0;
+}
+
+#terminal .filesystem-d {
+  font-weight: bold;
+  color: #6666ff;
+}
+
+#terminal .filesystem-f {
+  font-weight: bold;
+  color: #efefef;
+}
+
+#terminal div {
+  word-wrap: break-word;
+}

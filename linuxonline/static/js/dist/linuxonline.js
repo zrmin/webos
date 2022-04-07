@@ -50,7 +50,25 @@ class AlinuxonlineLinux {
     constructor(root) {
         this.root = root;
         this.$linux = $(`
-        <div class="alinuxonline_linux">在线linux学习</div>
+        <div class="alinuxonline_linux">
+            <div class="alinuxonline_linux_field">
+                <span style="text-align:center;display:block;" class="title">在线Linux Ternimal</span>
+                <div id="terminal">
+                    <p class="hidden">
+                        <span class="prompt"></span>
+                        <span contenteditable="true" class="input"></span>
+                    </p>
+                </div>
+                <script>
+                    let usebootLoader = true
+
+                    let customPrompt = function () {
+                        return '[root@locahost]&nbsp;&nbsp;${Terminal.path} &gt;'
+                    }
+                    Terminal.init(document.getElementById("terminal"), commands, customPrompt);
+                </script>
+            <div>
+        </div>
             `);
 
         this.hide(); // linux界面先隐藏
